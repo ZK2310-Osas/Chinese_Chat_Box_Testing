@@ -1,6 +1,6 @@
 # 月下东坡 (Moonlit Dongpo) 🌙
 
-An AI chatbot inspired by **Su Shi (苏轼)** and his poem **《水调歌头》**. Ask questions in Chinese or English to learn about the poem, its meaning, and Su Shi's life.
+A Chinese-only historical roleplay in which you speak with **Su Shi (苏轼)** about **《水调歌头》**, poetry, and life.
 
 ## 🌐 Just want to use the chatbot?
 
@@ -32,7 +32,7 @@ Open the website link shared by the project owner, type your question in the cha
 
 ## 💬 How to use
 
-Try asking: **“苏轼为什么写《水调歌头》？”** The AI will answer in the chat box. You can ask follow-up questions too.
+Try asking: **“先生为何在中秋写下《水调歌头》？”** 苏轼会以第一人称用中文与你交谈。你也可以继续追问。
 
 ## ❓ Common problems
 
