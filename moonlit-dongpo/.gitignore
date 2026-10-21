@@ -1,0 +1,8 @@
+# Do not commit credentials
+.env
+.env.*
+!.env.example
+# Build outputs
+app
+app.exe
+*.exe
