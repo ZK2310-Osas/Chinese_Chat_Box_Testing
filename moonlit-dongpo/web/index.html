@@ -4,8 +4,8 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="theme-color" content="#090f1b"/>
-  <meta name="description" content="月下东坡——以现代交互方式品读苏轼《水调歌头》，与 AI 共赏千年明月。"/>
-  <title>月下东坡 | 水调歌头 · AI 诗词雅集</title>
+  <meta name="description" content="月下东坡——与苏轼对谈，品读《水调歌头》，共赏千年明月。"/>
+  <title>月下东坡 | 水调歌头 · 东坡诗谈</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet"/>
@@ -15,49 +15,50 @@
   <div class="site-shell">
     <header class="topbar">
       <a class="brand" href="#home" aria-label="月下东坡，返回首页">
-        <span class="brand-icon">月</span><span class="brand-text"><strong>月下xiao东坡</strong><small>MOONLIT DONGPO</small></span>
+        <span class="brand-icon" aria-hidden="true"></span><span class="brand-text"><strong>月下东坡</strong><small>苏轼 · 水调歌头</small></span>
       </a>
-      <nav class="desktop-nav" aria-label="主导航"><a href="#home" class="active">诗境</a><a href="#poem">原词赏读</a><a href="#dialogue">AI 诗谈</a></nav>
-      <a class="nav-cta" href="#dialogue"><span class="sparkle">✦</span> 开启诗谈 <span aria-hidden="true">↗</span></a>
+      <nav class="desktop-nav" aria-label="主导航"><a href="#home" class="active">封面与原文</a><a href="#dialogue">与东坡对话</a></nav>
+      <a class="nav-cta" href="#dialogue"><span class="sparkle">✦</span> 进入对话 <span aria-hidden="true">↗</span></a>
     </header>
-    <main id="home">
-      <section class="hero" aria-label="水调歌头诗词首页">
-        <div class="hero-halo"></div><div class="star star-a"></div><div class="star star-b"></div><div class="star star-c"></div>
-        <div class="moon-scene" aria-hidden="true"><div class="moon-ring ring-a"></div><div class="moon-ring ring-b"></div><div class="moon"><span class="moon-crater crater-a"></span><span class="moon-crater crater-b"></span><span class="moon-crater crater-c"></span></div><div class="cloud cloud-a"></div><div class="cloud cloud-b"></div></div>
-        <div class="hero-content"><div class="eyebrow"><span class="eyebrow-line"></span> 宋词雅韵 · 千年共月 <span class="eyebrow-line"></span></div>
-          <p class="hero-side">丙辰中秋 · 密州</p>
-          <h1>但愿人长久<span>千里共婵娟</span></h1>
-          <div class="hero-divider"><i></i><span>✦</span><i></i></div>
-          <p class="hero-en">ONE MOON · A THOUSAND YEARS OF POETRY</p>
-          <p class="hero-description">跨越千年的月光，照见不变的人间深情。<br/>与 AI 一同走进苏轼的词境，读懂诗意，也读懂人生。</p>
-          <a href="#dialogue" class="gold-button">与东坡共赏明月 <span>↗</span></a>
+    <main>
+      <section class="intro-section" id="home" aria-label="苏轼与水调歌头原文">
+        <div class="intro-cover">
+          <div class="cover-moon" aria-hidden="true"></div>
+          <div class="cover-copy">
+            <p class="cover-kicker">丙辰中秋 · 密州</p>
+            <h1>但愿人长久<span>千里共婵娟</span></h1>
+            <p>苏轼 · 水调歌头</p>
+          </div>
+          <span class="cover-side">明月几时有 · 把酒问青天</span>
         </div>
-        <span class="hero-vertical">明月几时有 · 把酒问青天</span>
-        <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span>01 / 03</span></div>
-      </section>
-      <section class="experience" id="poem">
-        <div class="section-heading"><p class="section-kicker">01 <span> / </span> THE MASTERPIECE</p><h2>一阙水调 <em>千古风华</em></h2><p>苏轼 · 水调歌头 · 明月几时有</p></div>
-        <div class="poem-layout">
-          <aside class="poem-info"><div class="small-deco">✦ &nbsp; 宋 · 苏轼</div><h3>水调歌头</h3><p class="poem-subtitle">明月几时有</p><div class="thin-line"></div><p class="preface">丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。</p><div class="poem-meta"><div><span>创作年代</span><strong>公元 1076 年</strong></div><div><span>文学体裁</span><strong>宋词 · 词牌「水调歌头」</strong></div><div><span>核心意象</span><strong>明月 · 思念 · 旷达</strong></div></div><div class="seal">东坡<br/>居士</div></aside>
-          <article class="poem-paper" aria-label="水调歌头全文"><div class="paper-corner tl"></div><div class="paper-corner tr"></div><div class="paper-corner bl"></div><div class="paper-corner br"></div>
-            <div class="poem-mark">原 词</div>
-            <div class="poem-lines"><p>明月几时有？把酒问青天。<br/>不知天上宫阙，今夕是何年。</p><p>我欲乘风归去，又恐琼楼玉宇，<br/>高处不胜寒。起舞弄清影，<br/>何似在人间。</p><div class="stanza-sep">✧</div><p>转朱阁，低绮户，照无眠。<br/>不应有恨，何事长向别时圆？</p><p>人有悲欢离合，月有阴晴圆缺，<br/>此事古难全。</p><p class="final-verse">但愿人长久，千里共婵娟。</p></div>
-            <div class="paper-footer"><span>《东坡乐府》</span><span>词 · 中秋</span></div>
-          </article>
-        </div>
+        <article class="intro-poem" id="poem" aria-label="水调歌头全文">
+          <div class="intro-poem-heading">
+            <span>苏轼 · 宋</span>
+            <h2>水调歌头</h2>
+            <p>明月几时有</p>
+          </div>
+          <p class="intro-preface">丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。</p>
+          <div class="intro-verses">
+            <p>明月几时有？把酒问青天。<br/>不知天上宫阙，今夕是何年。</p>
+            <p>我欲乘风归去，又恐琼楼玉宇，<br/>高处不胜寒。起舞弄清影，何似在人间。</p>
+            <p>转朱阁，低绮户，照无眠。<br/>不应有恨，何事长向别时圆？</p>
+            <p>人有悲欢离合，月有阴晴圆缺，<br/>此事古难全。</p>
+            <p class="intro-final-verse">但愿人长久，千里共婵娟。</p>
+          </div>
+          <a class="poem-chat-link" href="#dialogue">读完原文，与东坡对话 <span aria-hidden="true">↓</span></a>
+        </article>
       </section>
       <section class="chat-section" id="dialogue">
-        <div class="section-heading"><p class="section-kicker">02 <span> / </span> AN INTELLIGENT CONVERSATION</p><h2>以月为媒 <em>与诗对话</em></h2><p>从一句宋词出发，让千年文心成为此刻的回响。</p></div>
+        <div class="section-heading"><p class="section-kicker">与苏轼对谈</p><h2>以月为媒 <em>与东坡对话</em></h2><p>从一句宋词出发，让千年文心成为此刻的回响。</p></div>
         <div class="chat-frame">
-          <aside class="chat-aside"><div class="aside-top"><span class="aside-kicker">THE POETIC COMPANION</span><div class="mini-moon" aria-hidden="true"></div><h3>一轮明月<br/>万千心绪</h3><p>关于这首词，你想知道什么？不妨从这里开始。</p></div><div class="suggestions" aria-label="推荐问题"><button type="button" class="suggestion" data-question="苏轼为什么在中秋写下《水调歌头》？"><span>01</span><span>创作背景与苏轼的心境</span><b>↗</b></button><button type="button" class="suggestion" data-question="请解释「但愿人长久，千里共婵娟」的深层含义。"><span>02</span><span>千里共婵娟的深层含义</span><b>↗</b></button><button type="button" class="suggestion" data-question="《水调歌头》中的月亮有哪些象征意义？"><span>03</span><span>词中明月的意象与象征</span><b>↗</b></button><button type="button" class="suggestion" data-question="如何理解「人有悲欢离合，月有阴晴圆缺」体现的人生哲学？"><span>04</span><span>悲欢离合的人生哲学</span><b>↗</b></button></div><div class="aside-bottom"><span>✧</span><p>月有阴晴圆缺<br/>诗有百般解读</p></div></aside>
-          <div class="chat-panel"><div class="chat-top"><div class="assistant-profile"><div class="avatar">蘇</div><div><strong>东坡诗语 <span class="ai-tag">AI</span></strong><small><span class="online-dot"></span> 诗词文化智能导览</small></div></div><button class="reset-button" id="resetChat" type="button" title="重新开始对话">↻ <span>新对话</span></button></div>
+          <aside class="chat-aside"><div class="aside-top"><span class="aside-kicker">月下闲谈</span><div class="mini-moon" aria-hidden="true"></div><h3>一轮明月<br/>万千心绪</h3><p>关于这首词，你想知道什么？不妨从这里开始。</p></div><details class="suggestion-disclosure"><summary>推荐问题 <span class="suggestion-count">4 条</span><span class="disclosure-arrow" aria-hidden="true">⌄</span></summary><div class="suggestions" aria-label="推荐问题"><button type="button" class="suggestion" data-question="先生为何在中秋写下《水调歌头》？"><span>01</span><span>创作背景与当时心境</span><b>↗</b></button><button type="button" class="suggestion" data-question="请与我谈谈「但愿人长久，千里共婵娟」的含义。"><span>02</span><span>千里共婵娟的深层含义</span><b>↗</b></button><button type="button" class="suggestion" data-question="你在《水调歌头》中写月亮，寄托了怎样的情思？"><span>03</span><span>词中明月的意象与情思</span><b>↗</b></button><button type="button" class="suggestion" data-question="你如何看待「人有悲欢离合，月有阴晴圆缺」？"><span>04</span><span>悲欢离合的人生感悟</span><b>↗</b></button></div></details><div class="aside-bottom"><span>✧</span><p>月有阴晴圆缺<br/>诗有百般解读</p></div></aside>
+          <div class="chat-panel"><div class="chat-top"><div class="assistant-profile"><div class="avatar">苏</div><div><strong>苏轼</strong><small><span class="online-dot"></span> 北宋文豪 · 与你对谈</small></div></div><button class="reset-button" id="resetChat" type="button" title="重新开始对话">↻ <span>新对话</span></button></div>
             <div class="messages" id="messages" role="log" aria-live="polite" aria-label="诗词对话"></div>
-            <div class="chat-compose"><div class="input-wrap"><textarea id="chatInput" rows="1" maxlength="300" placeholder="向东坡诗语提问，探寻词中意境……" aria-label="输入想问的问题"></textarea><button type="button" id="sendButton" class="send-button" aria-label="发送消息">➤</button></div><div class="composer-note"><span>✧ &nbsp; 让千年诗意，回应此刻心声</span><span id="charCount">0 / 300</span></div></div>
+            <div class="chat-compose"><div class="input-wrap"><textarea id="chatInput" rows="1" maxlength="300" placeholder="与苏轼谈诗论心……" aria-label="输入想问的问题"></textarea><button type="button" id="sendButton" class="send-button" aria-label="发送消息">➤</button></div><div class="composer-note"><span>✧ &nbsp; 让千年诗意，回应此刻心声</span><span id="charCount">0 / 300</span></div></div>
           </div>
         </div>
       </section>
-      <section class="closing"><div class="closing-symbol">✦</div><p>“人有悲欢离合，月有阴晴圆缺，此事古难全。”</p><span>愿每一次仰望，都能与千年前的诗心相逢。</span></section>
-    </main><footer><div class="footer-brand"><span class="brand-icon">月</span><div><strong>月下东坡</strong><small>诗意不息 · 对话千年</small></div></div><span>SU SHI · SHUI DIAO GE TOU</span><span>© 2026 月下东坡 · AI POETRY EXPERIENCE</span></footer>
+    </main><footer><div class="footer-brand"><span class="brand-icon" aria-hidden="true"></span><div><strong>月下东坡</strong><small>诗意不息 · 对话千年</small></div></div><span>苏轼 · 水调歌头</span><span>明月几时有 · 把酒问青天</span></footer>
   </div>
   <script src="/app.js" defer></script>
 </body>

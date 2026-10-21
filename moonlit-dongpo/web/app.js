@@ -1,5 +1,5 @@
 (() => {
-  const opening = '明月几时有，把酒问青天。\n\n欢迎来到「月下东坡」。在这里，我们可以一起读懂苏轼的《水调歌头》：从词句、意象与音韵，到中秋之夜的思念与旷达。你想先从哪一句开始？';
+  const opening = '明月几时有？把酒问青天。\n\n朋友，今夜月色正好。你想与我谈谈这轮明月，还是聊聊人生的悲欢离合？';
   const messagesEl = document.getElementById('messages');
   const input = document.getElementById('chatInput');
   const send = document.getElementById('sendButton');
@@ -12,9 +12,9 @@
   function textLength(s) { return [...s].length; }
   function createMessage(role, content, { error = false } = {}) {
     const row = document.createElement('div'); row.className = `message-row ${role === 'user' ? 'from-user' : 'from-bot'}`;
-    const avatar = document.createElement('div'); avatar.className = 'msg-avatar'; avatar.textContent = role === 'user' ? '我' : '蘇';
+    const avatar = document.createElement('div'); avatar.className = 'msg-avatar'; avatar.textContent = role === 'user' ? '我' : '苏';
     const body = document.createElement('div'); body.className = 'message-body';
-    const author = document.createElement('span'); author.className = 'message-author'; author.textContent = role === 'user' ? '访客' : '东坡诗语';
+    const author = document.createElement('span'); author.className = 'message-author'; author.textContent = role === 'user' ? '访客' : '苏轼';
     const bubble = document.createElement('div'); bubble.className = `message-bubble${error ? ' error' : ''}`; bubble.textContent = content;
     body.append(author,bubble); row.append(avatar,body); messagesEl.append(row);
     messagesEl.scrollTop = messagesEl.scrollHeight; return row;
@@ -26,7 +26,7 @@
     const text=(question ?? input.value).trim(); if (busy || !text || textLength(text)>300) return;
     input.value=''; syncCount(); createMessage('user',text); history.push({role:'user',content:text});
     const requestHistory=history.slice(-12); setBusy(true);
-    const typing=createMessage('assistant','月光流转，正在寻句……'); typing.classList.add('typing');
+    const typing=createMessage('assistant','且容我想一想……'); typing.classList.add('typing');
     try {
       const response = await fetch('/api/chat', {method:'POST', headers:{'Content-Type':'application/json','X-Session-Id':sessionId},body:JSON.stringify({messages:requestHistory})});
       const result = await response.json(); typing.remove();
