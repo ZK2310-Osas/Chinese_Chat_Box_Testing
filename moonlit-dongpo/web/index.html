@@ -52,7 +52,7 @@
         <div class="section-heading"><p class="section-kicker">与苏轼对谈</p><h2>以月为媒 <em>与东坡对话</em></h2><p>从一句宋词出发，让千年文心成为此刻的回响。</p></div>
         <div class="chat-frame">
           <aside class="chat-aside"><div class="aside-top"><span class="aside-kicker">月下闲谈</span><div class="mini-moon" aria-hidden="true"></div><h3>一轮明月<br/>万千心绪</h3><p>关于这首词，你想知道什么？不妨从这里开始。</p></div><details class="suggestion-disclosure"><summary>推荐问题 <span class="suggestion-count">4 条</span><span class="disclosure-arrow" aria-hidden="true">⌄</span></summary><div class="suggestions" aria-label="推荐问题"><button type="button" class="suggestion" data-question="先生为何在中秋写下《水调歌头》？"><span>01</span><span>创作背景与当时心境</span><b>↗</b></button><button type="button" class="suggestion" data-question="请与我谈谈「但愿人长久，千里共婵娟」的含义。"><span>02</span><span>千里共婵娟的深层含义</span><b>↗</b></button><button type="button" class="suggestion" data-question="你在《水调歌头》中写月亮，寄托了怎样的情思？"><span>03</span><span>词中明月的意象与情思</span><b>↗</b></button><button type="button" class="suggestion" data-question="你如何看待「人有悲欢离合，月有阴晴圆缺」？"><span>04</span><span>悲欢离合的人生感悟</span><b>↗</b></button></div></details><div class="aside-bottom"><span>✧</span><p>月有阴晴圆缺<br/>诗有百般解读</p></div></aside>
-          <div class="chat-panel"><div class="chat-top"><div class="assistant-profile"><div class="avatar">苏</div><div><strong>苏轼</strong><small><span class="online-dot"></span> 北宋文豪 · 与你对谈</small></div></div><button class="reset-button" id="resetChat" type="button" title="重新开始对话">↻ <span>新对话</span></button></div>
+          <div class="chat-panel"><div class="chat-top"><div class="assistant-profile"><img class="avatar" src="/sushi.jpg" alt="苏轼头像"/><div><strong>苏轼</strong><small><span class="online-dot"></span> 北宋文豪 · 与你对谈</small></div></div><button class="reset-button" id="resetChat" type="button" title="重新开始对话">↻ <span>新对话</span></button></div>
             <div class="messages" id="messages" role="log" aria-live="polite" aria-label="诗词对话"></div>
             <div class="chat-compose"><div class="input-wrap"><textarea id="chatInput" rows="1" maxlength="300" placeholder="与苏轼谈诗论心……" aria-label="输入想问的问题"></textarea><button type="button" id="sendButton" class="send-button" aria-label="发送消息">➤</button></div><div class="composer-note"><span>✧ &nbsp; 让千年诗意，回应此刻心声</span><span id="charCount">0 / 300</span></div></div>
           </div>
@@ -60,6 +60,11 @@
       </section>
     </main><footer><div class="footer-brand"><span class="brand-icon" aria-hidden="true"></span><div><strong>月下东坡</strong><small>诗意不息 · 对话千年</small></div></div><span>苏轼 · 水调歌头</span><span>明月几时有 · 把酒问青天</span></footer>
   </div>
+  <button type="button" class="bgm-button" id="bgmButton" aria-pressed="true" aria-label="暂停背景音乐">
+    <span class="bgm-icon" aria-hidden="true">♪</span>
+    <span id="bgmLabel">暂停音乐</span>
+  </button>
+  <audio id="bgmAudio" autoplay loop preload="auto"><source src="/BGM.mp3" type="audio/mpeg"/></audio>
   <script src="/app.js" defer></script>
 </body>
 </html>

@@ -12,7 +12,16 @@
   function textLength(s) { return [...s].length; }
   function createMessage(role, content, { error = false } = {}) {
     const row = document.createElement('div'); row.className = `message-row ${role === 'user' ? 'from-user' : 'from-bot'}`;
-    const avatar = document.createElement('div'); avatar.className = 'msg-avatar'; avatar.textContent = role === 'user' ? '我' : '苏';
+    let avatar;
+    if (role === 'user') {
+      avatar = document.createElement('div');
+      avatar.textContent = '我';
+    } else {
+      avatar = document.createElement('img');
+      avatar.src = '/sushi.jpg';
+      avatar.alt = '苏轼头像';
+    }
+    avatar.className = 'msg-avatar';
     const body = document.createElement('div'); body.className = 'message-body';
     const author = document.createElement('span'); author.className = 'message-author'; author.textContent = role === 'user' ? '访客' : '苏轼';
     const bubble = document.createElement('div'); bubble.className = `message-bubble${error ? ' error' : ''}`; bubble.textContent = content;
@@ -40,5 +49,35 @@
   input.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();ask();}});
   reset.addEventListener('click',()=>{if(!busy){start();input.focus();}});
   document.querySelectorAll('[data-question]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('dialogue').scrollIntoView({behavior:'smooth'});ask(b.dataset.question);}));
+
+  const bgmButton = document.getElementById('bgmButton');
+  const bgmLabel = document.getElementById('bgmLabel');
+  const bgmAudio = document.getElementById('bgmAudio');
+  if (bgmAudio) bgmAudio.volume = 0.45;
+
+  function updateBgmButton() {
+    if (!bgmLabel || !bgmButton || !bgmAudio) return;
+    const isPlaying = !bgmAudio.paused && !bgmAudio.ended;
+    bgmButton.setAttribute('aria-pressed', String(isPlaying));
+    bgmButton.setAttribute('aria-label', isPlaying ? '暂停背景音乐' : '播放背景音乐');
+    bgmLabel.textContent = isPlaying ? '暂停音乐' : '播放音乐';
+  }
+
+  bgmAudio?.play().catch(() => {});
+  bgmButton?.addEventListener('click', async () => {
+    if (!bgmAudio) return;
+    try {
+      if (bgmAudio.paused) await bgmAudio.play(); else bgmAudio.pause();
+    } catch (_) {
+      if (bgmLabel) bgmLabel.textContent = '播放失败';
+      return;
+    }
+    updateBgmButton();
+  });
+  bgmAudio?.addEventListener('play', updateBgmButton);
+  bgmAudio?.addEventListener('pause', updateBgmButton);
+  bgmAudio?.addEventListener('volumechange', updateBgmButton);
+  updateBgmButton();
+
   start();syncCount();
 })();
